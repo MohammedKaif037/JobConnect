@@ -35,7 +35,7 @@ async function fetchIndiaLocations() {
     const appId = '29036110';
     const appKey = '3b1d1e9624324f0a1280828a0b69e46a';
     const country = 'in'; // ISO 3166-1 alpha-2 code for India
-    const url = `http://api.adzuna.com/v1/api/jobs/${country}/geodata`;
+    const url = `https://api.adzuna.com/v1/api/jobs/${country}/geodata`;
 
     try {
         const response = await fetch(url);
@@ -62,7 +62,7 @@ async function fetchJobs(title, location, page, datePosted = '', salaryMin = '',
     const appId = '29036110';
     const appKey = '3b1d1e9624324f0a1280828a0b69e46a';
     const country = 'in'; // ISO 3166-1 alpha-2 code for India
-    let url = `http://api.adzuna.com/v1/api/jobs/${country}/search/${page}?app_id=${appId}&app_key=${appKey}&results_per_page=20&what=${title}&content-type=application/json`;
+    let url = `https://api.adzuna.com/v1/api/jobs/${country}/search/${page}?app_id=${appId}&app_key=${appKey}&results_per_page=20&what=${title}&content-type=application/json`;
     
     if (location) url += `&where=${location}`;
     if (datePosted) url += `&max_days_old=${datePosted}`;
@@ -145,7 +145,7 @@ async function fetchIndiaLocations() {
     const appId = '29036110';
     const appKey = '3b1d1e9624324f0a1280828a0b69e46a';
     const country = 'in'; // ISO 3166-1 alpha-2 code for India
-    const url = `http://api.adzuna.com/v1/api/jobs/${country}/geodata`;
+    const url = `https://api.adzuna.com/v1/api/jobs/${country}/geodata`;
   
     try {
       const response = await fetch(url);
