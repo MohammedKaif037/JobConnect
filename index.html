@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Job Board</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#jobs-container">Jobs</a></li>
+        <li><a href="#about">About Us</a></li>
+       </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="search-form">
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" name="job-title">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter location">
+        <button type="submit">Search</button>
+      </form>
+      
+
+      <form id="filter-form">
+        <label for="date-posted">Date Posted:</label>
+        <select id="date-posted" name="date-posted">
+          <option value="">Any</option>
+          <option value="1">Last 24 hours</option>
+          <option value="3">Last 3 days</option>
+          <option value="7">Last 7 days</option>
+        </select>
+      
+        <label for="salary-min">Salary Min:</label>
+        <input type="text" id="salary-min" name="salary-min" placeholder="Enter minimum salary">
+      
+        <label for="salary-max">Salary Max:</label>
+        <input type="text" id="salary-max" name="salary-max" placeholder="Enter maximum salary">
+      
+        <label for="remote-jobs">Remote Jobs:</label>
+        <input type="checkbox" id="remote-jobs" name="remote-jobs">
+      
+        <label for="sort-by">Sort By:</label>
+        <select id="sort-by" name="sort-by">
+          <option value="">None</option>
+          <option value="date">Date posted</option>
+          <!-- Add more sorting options if needed -->
+        </select>
+      
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+          <option value="">Any</option>
+          <option value="IT Jobs">IT Jobs</option>
+          <option value="Engineering Jobs">Engineering Jobs</option>
+         </select>
+      
+        <label for="contract-type">Contract Type:</label>
+        <select id="contract-type" name="contract-type">
+          <option value="">Any</option>
+          <option value="permanent">Permanent</option>
+          <option value="contract">Contract</option>
+        </select>
+      
+        <label for="hours">Hours:</label>
+        <select id="hours" name="hours">
+          <option value="">Any</option>
+          <option value="full_time">Full Time</option>
+          <option value="part_time">Part Time</option>
+        </select>
+      
+        <button type="submit">Apply Filters</button>
+      </form>
+
+    <div id="jobs-container"></div>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Welcome to Job Board, your number one source for all job listings. We're dedicated to providing you the best of job opportunities, with a focus on reliability, and uniqueness.</p>
+    </section>
+    
+    <div id="pagination-container">
+        <div id="pagination"></div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +1234567890</p>
+    </div>
+    <div class="social-media">
+      <h3>Follow Us</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p>&copy; 2024 Job Board. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
